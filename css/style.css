@@ -1,0 +1,36 @@
+/* style.css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    background-color: #363636;
+    color: #ffffff;
+}
+
+a:link, a:visited, a:focus, a:active {
+    text-decoration: none;
+    color: #ffffff;
+    opacity: .4;
+}
+
+a:hover, a:focus {
+    opacity: 1;
+}
+
+.container {
+    padding: 50px 10%;
+}
+
+img {
+    height: 200px;
+}
+
+.upload-area {
+    background-color: grey;
+
+}
+.photo-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
