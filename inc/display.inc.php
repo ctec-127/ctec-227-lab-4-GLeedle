@@ -22,7 +22,7 @@ function display_images()
             while ($filename = readdir($dir_handle)) {
                 if (!is_dir($filename) && $filename != '.DS_Store') {
                     $filename = urlencode($filename);
-                    echo "<div><img src=\"uploads/$filename\" alt=\"A photo\">";
+                    echo "<div class=\"pics\"><img src=\"uploads/$filename\" alt=\"A photo\">";
                     echo "<a href=\"inc/display.inc.php?file=$filename\"><div class=\"btn-sm btn-danger text-center\">Delete</div></a></div>";
                 }
             } // end while

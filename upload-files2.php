@@ -1,6 +1,7 @@
 <?php 
     require "inc/upload.inc.php";
-    require "inc/display.inc.php";    
+    require "inc/display.inc.php";
+    
 ?>
 <!DOCTYPE html>
 <!-- 
@@ -23,13 +24,6 @@
 </head>
 
 <body>
-<?php include "inc/navbar.inc.php" ?>
-<div class="concert-bg"><img class="concert-bg" src="img/concert.jpg" alt="Concert"></div>
-<br>
-<h1>Welcome to the Concert photo uploader from &copy;Fractal Productions</h1>
-<div class="main-text">
-<p class="uploader-text">This is an area that members can use to show off their great photos of artists and of concerts that you've attended. Please make sure all photos uploaded are appropriate and are family friendly. </p>
-</div>
 <div class="container">
         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
             <div class="container">            
@@ -62,7 +56,8 @@
                         <button type="submit" class="btn btn-primary pull-right">Upload</button>
                         <div class="box-tools pull-right">
                                             <button type="button" class="btn btn-danger btn-xs remove-preview">
-                                                <i class="fa fa-times"></i>Reset Form</button>
+                                                <i class="fa fa-times"></i> Reset Form
+                                            </button>
                                         </div>
                         <?php
                         if (!empty($message)) {
