@@ -1,6 +1,6 @@
 <?php 
     require "inc/upload.inc.php";
-    // require "inc/display.inc.php";
+    require "inc/display.inc.php";
 ?>
 <!DOCTYPE html>
 <!-- 

@@ -2,7 +2,7 @@
 
 if (isset($_GET['file'])) {
     unlink("../uploads/" . $_GET['file']);
-    location:(header('../upload-files.php'));
+    header('Location:../upload-files.php');
 }
 
 function display_images()
