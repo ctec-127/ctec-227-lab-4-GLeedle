@@ -1,5 +1,6 @@
 <?php 
     require "inc/upload.inc.php";
+    // require "inc/display.inc.php";
 ?>
 <!DOCTYPE html>
 <!-- 
@@ -17,28 +18,68 @@
     <title>Lab 4 - File Uploader</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    
+<div class="container">
+        <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">Upload Your Favorite Images</label>
+                            <div class="preview-zone hidden">
+                                <div class="box box-solid">
+                                    <div class="box-header with-border">
+                                        <div><b>Preview</b></div>
+                                        
+                                    </div>
+                                    <div class="box-body"></div>
+                                </div>
+                            </div>
+                            <div class="dropzone-wrapper">
+                                <div class="dropzone-desc">
+                                    <!-- <i class="glyphicon glyphicon-download-alt"></i> -->
+                                    <p>Click Here to upload image or drag image here.</p>
+                                </div>
+                                <input type="file" name="file_upload" class="dropzone">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right">Upload</button>
+                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-danger btn-xs remove-preview">
+                                                <i class="fa fa-times"></i> Reset Form
+                                            </button>
+                                        </div>
+                        <?php
+                        if (!empty($message)) {
+                            echo "<p id=\"alert\" class=\"alert alert-primary mt-4\">{$message}</p>";
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </form>
 
-    <div class="container">
-    <?php if (!empty($message)) {
-            echo "<p class=\"alert alert-primary\">{$message}</p>";
-        } ?>
-        <div class="upload-area">
-            <form action="" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="MAX_FILE_SIZE" value="100000000">
-                <input type="file" name="file_upload"><br><br>
-                <input class="btn btn-primary" type="submit" name="submit" value="Upload">
-            </form>            
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex flex-wrap flex-row align-items-center justify-content-between">
+                    <?php display_images(); ?>
+                </div>
+            </div>
         </div>
-        <br/>
-        <div class="photo-list">
-        <?php include "inc/display.inc.php" ?>
-        </div>        
     </div>
-</body>
+
+    <script src="js/script.js"></script>
+</body>    
+
+
+
 </html>
