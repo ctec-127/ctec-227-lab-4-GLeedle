@@ -33,9 +33,3 @@
             $message = $upload_errors[$error];
         } // end of if
     } // end of if
-
-
-    
-    ?>
-
-    

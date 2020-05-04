@@ -1,13 +1,16 @@
 <?php
 
-// if (isset($_GET['file'])) {
-//     unlink("../uploads/" . $_GET['file']);
-//     header('Location:../upload-files.php');
 if (isset($_GET['file'])) {
-    if (unlink("../uploads/" . $_GET['file'])) {
-        header('Location:../upload-files.php');
-    } else {
-        echo '<p class="alert alert-danger text-center">Failed to delete file</p>';
+
+    copy('../uploads/' . $_GET['file'], '../deleted/' . $_GET['file']);
+
+
+    if (isset($_GET['file'])) {
+        if (unlink("../uploads/" . $_GET['file'])) {
+            header('Location:../upload-files.php');
+        } else {
+            echo '<p class="alert alert-danger text-center">Failed to delete file</p>';
+        }
     }
 }
 
