@@ -60,7 +60,7 @@
                                         </div>
                         <?php
                         if (!empty($message)) {
-                            echo "<p id=\"alert\" class=\"alert alert-primary mt-4\">{$message}</p>";
+                            echo "<p id=\"alert\" class=\"alert alert-primary mt-4 text-center\">{$message}</p>";
                         }
                         ?>
                     </div>

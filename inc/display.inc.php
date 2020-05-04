@@ -1,8 +1,14 @@
 <?php
 
+// if (isset($_GET['file'])) {
+//     unlink("../uploads/" . $_GET['file']);
+//     header('Location:../upload-files.php');
 if (isset($_GET['file'])) {
-    unlink("../uploads/" . $_GET['file']);
-    header('Location:../upload-files.php');
+    if (unlink("../uploads/" . $_GET['file'])) {
+        header('Location:../upload-files.php');
+    } else {
+        echo '<p class="alert alert-danger text-center">Failed to delete file</p>';
+    }
 }
 
 function display_images()
@@ -14,7 +20,7 @@ function display_images()
                 if (!is_dir($filename) && $filename != '.DS_Store') {
                     $filename = urlencode($filename);
                     echo "<div><img src=\"uploads/$filename\" alt=\"A photo\">";
-                    echo "<div class=\"btn-sm btn-outline-danger text-center\"><a href=\"inc/display.inc.php?file=$filename\">Delete<a/></div></div>";
+                    echo "<a href=\"inc/display.inc.php?file=$filename\"><div class=\"btn-sm btn-danger text-center\">Delete</div></a></div>";
                 }
             } // end while
             // close the directory now that we are done with it
