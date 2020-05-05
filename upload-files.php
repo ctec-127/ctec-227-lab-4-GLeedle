@@ -28,7 +28,7 @@ require "inc/display.inc.php";
     <br>
     <h1>Welcome to the Concert photo uploader from &copy;Fractal Productions</h1>
     <div class="main-text">
-        <p class="uploader-text">This is an area that members can use to show off their great photos of artists and of concerts that you've attended. Please make sure all photos uploaded are appropriate and are family friendly. </p>
+        <p class="uploader-text">This is an area that members can use to show off their great photos of artists and photos of concerts that you've attended. Please make sure all photos uploaded are appropriate and are family friendly. </p>
     </div>
     <div class="container">
         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
