@@ -59,8 +59,7 @@ h1 {
 
 .btn-sm {
     width: 80px;
-    margin: 0 auto;
-    opacity: .7;
+    margin: 0 auto;    
 }
 
 .btn-sm:hover {
