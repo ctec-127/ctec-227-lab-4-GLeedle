@@ -2,8 +2,11 @@
 
 if (isset($_GET['file'])) {
 
+    // copies files to a deleted directory
+    if (!is_dir('uploads')) {
+        mkdir('uploads')
     copy('../uploads/' . $_GET['file'], '../deleted/' . $_GET['file']);
-
+    }
 
     if (isset($_GET['file'])) {
         if (unlink("../uploads/" . $_GET['file'])) {
