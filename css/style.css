@@ -7,6 +7,7 @@ body {
     background-color: #363636;
     color: #ffffff;
     letter-spacing: 1.25px;
+    font-size: 1em;
 }
 
 a:visited, a:active {
@@ -28,6 +29,10 @@ a:hover, a:focus {
 h1 {
     font-size: 1.5em;
     text-align: center;
+}
+
+.container-fluid {
+    min-width: 460px;
 }
 
 .main-text {
