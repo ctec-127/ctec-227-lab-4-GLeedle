@@ -17,6 +17,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // echo $sql;
     $result = $db->query($sql);
 
+    if (!is_dir('../../usr/' . $username)){
+        mkdir('../../usr/' . $username);
+        mkdir('../../usr/' . $username . '/uploads');
+        mkdir('../../usr/' . $username . '/deleted');
+        header('Location:../display/login.php');
+    }
+
     if (!$result) {
         echo "<div class=\"alert-danger w-25 mt-5 p-2 mx-auto text-center rounded shadow\">There was a problem registering your account, Please try again</div>";
     } else {
@@ -31,3 +38,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     unset($first_name);
     unset($last_name);
 }
+
+

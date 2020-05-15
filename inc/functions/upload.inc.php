@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $target_file = basename($_FILES['file_upload']['name']);
 
     // set upload folder name
-    $upload_dir = 'uploads';
+    $upload_dir = "../../usr/" . $_SESSION['username'] . "/uploads";
 
     // Now lets move the file
     // move_uploaded_file returns false if something went wrong

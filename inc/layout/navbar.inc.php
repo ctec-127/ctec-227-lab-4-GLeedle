@@ -17,6 +17,7 @@
   </li>
   <li class="nav-item">
   <a class="nav-link mt-3" href="https://win2008.clarkwp.com/newsletter/">Newsletter</a>
-  </li>
+  </li>  
+  <a class="nav-link mt-3" href="../functions/logout.php">Logout</a>
 </ul>
 </nav>

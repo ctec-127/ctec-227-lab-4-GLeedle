@@ -1,14 +1,14 @@
 <?php
 require '../layout/header.inc.php';
+session_start();
 ?>
 
 <body>
     <?php include "../layout/navbar.inc.php";
-    require "../create/register.inc.php";
+    require "../create/register.inc.php";   
     ?>
     <div class="form-errors" data-errors></div>
     <div class="container-fluid bg-secondary w-50 mt-5 mb-5 text-center rounded shadow">
-
         <div class="reg-wrapper bg-dark mx-auto w-50 p-2 text-white">
             <div class="registration-form  mt-5">
                 <p>I can see that you're not logged in</p>

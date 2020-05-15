@@ -1,8 +1,8 @@
-<div class="concert-bg"><img class="concert-bg" src="img/concert.jpg" alt="Concert"></div>
+<div class="concert-bg"><img class="concert-bg" src="../../img/concert.jpg" alt="Concert"></div>
     <br>
-    <h1>Welcome to the Concert photo uploader from &copy;Fractal Productions</h1>
+    <h1>Welcome <?php echo $_SESSION['first_name']; ?>!<br> to your Concert photo, uploader</h1>
     <div class="main-text">
-        <p class="uploader-text">This is an area that members can use to show off their great photos of artists and photos of concerts that you've attended. Please make sure all photos uploaded are appropriate and are family friendly. </p>
+        <p class="uploader-text">This is your personal area to store or show off your photos of artists and concerts.</p>
     </div>
     <div class="container">
         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
