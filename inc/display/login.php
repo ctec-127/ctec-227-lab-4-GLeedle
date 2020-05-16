@@ -4,19 +4,11 @@ require_once '../layout/header.inc.php';
 require '../functions/login.inc.php';
 ?>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lab 4 - File Uploader</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
-<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-
-</head>
-
 <body>
     <?php include "../layout/navbar.inc.php"; ?>
-    <div class="container bg-dark mt-5 p-5 text-center rounded shadow">
-        <form class="mx-auto" action="login.php" method="POST">
+    <div class="container bg-dark mt-5 p-5 text-center rounded shadow w-50">
+        <form class="mx-auto border border-secondary p-5" action="login.php" method="POST">
+        <p class="registration-form">Not a member yet? <a href="form.inc.php">Register here</a></p><br>
             <label for="username">Username</label>
             <br>
             <input type="text" name="username" id="username">

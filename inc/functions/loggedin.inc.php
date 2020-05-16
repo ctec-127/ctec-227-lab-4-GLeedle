@@ -1,6 +1,6 @@
 <?php
 if (!$_SESSION['username']) {
-    header('location: inc/display/form.inc.php');
+    header('location: inc/display/login.php');
 } else {
     header('location: inc/display/upload-files.php');
 }
