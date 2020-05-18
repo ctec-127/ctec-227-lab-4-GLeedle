@@ -14,7 +14,7 @@ session_start();
                 <p>Please choose a username and fill out the information below to register.</p>
             </div>
             <hr>
-            
+
             <form class="form-group mt-5" action="form.inc.php" method="POST">
                 <label for="username">Username</label>
                 <input class="form-control" type="text" id="username" name="username" placeholder="Username" value="<?php echo (isset($username) ? $username : ""); ?>">
@@ -42,5 +42,6 @@ session_start();
         </div>
     </div>
     <script src="../../js/form.js"></script>
+    <?php include '../layout/footer.inc.php'; ?>
 
 </body>

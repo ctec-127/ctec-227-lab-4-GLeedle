@@ -20,6 +20,8 @@
     </li>
 
   </ul>
-  <a class="btn btn-outline-warning mt-3 p-1 h-25" href="../display/login.php">Login</a>&nbsp;&nbsp;
-  <a class="btn btn-outline-danger mt-3  p-1 h-25" href="../functions/logout.php">Logout</a>
+  <a class="btn btn-outline-warning mt-3 p-1 h-25" id="login" href="../display/login.php">Login</a>&nbsp;&nbsp;
+  <a class="btn btn-outline-danger mt-3  p-1 h-25" id="logout" href="../../helper/logout_ajax.php">Logout</a>
 </nav>
+
+<script src="../../js/script.js"></script>

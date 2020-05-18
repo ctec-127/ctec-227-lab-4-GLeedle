@@ -4,7 +4,7 @@
     <div class="main-text">
         <p class="uploader-text text-center">This is your personal area to store and show off photos that you've taken of artists at our concerts.</p>
     </div>
-    <div class="container">
+    <div class="container full-page">
         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
             <div class="container">
                 <div class="row">
