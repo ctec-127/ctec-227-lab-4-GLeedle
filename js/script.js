@@ -34,7 +34,7 @@ function readFile(input) {
 
         reader.onload = function (e) {
             var htmlPreview =
-                '<div class="image-preview"><img src="../../usr/' + e.target.result + '" /></div>' +
+                '<div class="image-preview"><img src="' + e.target.result + '" /></div>' +
                 '<p>' + input.files[0].name + '</p>';
             var wrapperZone = $(input).parent();
             var previewZone = $(input).parent().parent().find('.preview-zone');
