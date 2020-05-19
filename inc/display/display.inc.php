@@ -26,7 +26,7 @@ function display_images()
             while ($filename = readdir($dir_handle)) {
                 if (!is_dir($filename) && $filename != '.DS_Store') {
                     $filename = rawurlencode($filename);
-                    echo "<div class=\"pics\"><a href=\"../../usr/" . $_SESSION['username'] . "/uploads/$filename\"><img src=\"../../usr/" . $_SESSION['username'] . "/uploads/$filename\" alt=\"A photo\"></a>";
+                    echo "<div class=\"pics\"><a href=\"../../usr/" . $_SESSION['username'] . "/uploads/$filename\"  target=\"_blank\"><img src=\"../../usr/" . $_SESSION['username'] . "/uploads/$filename\" alt=\"A photo\"></a>";
                     echo "<a href=\"display.inc.php?file=$filename\"><div class=\"btn-sm btn-outline-danger text-center\">Delete</div></a></div>";
                 }
             } // end while
